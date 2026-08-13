@@ -1,0 +1,198 @@
+body {
+    background-color: #fff5f8;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #555555;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    padding: 60px 20px;
+}
+
+h1 {
+    color: #d66b8c;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+header p {
+    color: #a8758d;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+header img {
+    width: 100%;
+    max-width: 1000px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto 30px;
+    box-shadow: 0 8px 20px rgba(214, 107, 140, 0.15);
+}
+
+header a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #d66b8c;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header a:hover {
+    background-color: #c45d7d;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #fff8fb;
+}
+
+.galeria h2 {
+    color: #d66b8c;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.galeria p {
+    color: #a8758d;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.galeria-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.diseño {
+    width: 280px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 5px 18px rgba(217, 138, 170, 0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diseño img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.diseño:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(217, 138, 170, 0.25);
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto {
+    background-color: white;
+    padding: 50px 20px;
+    margin-top: 20px;
+}
+
+#contacto h2 {
+    color: #d66b8c;
+    font-size: 28px;
+}
+
+#contacto p {
+    color: #a8758d;
+    font-size: 17px;
+    margin: 12px;
+}
+
+/* =========================
+   VENTANA DE IMAGEN
+========================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(80, 45, 65, 0.75);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #f3b6ce;
+}
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    header img {
+        height: 220px;
+    }
+
+    .galeria {
+        padding: 60px 20px;
+    }
+
+    .galeria h2 {
+        font-size: 30px;
+    }
+
+    .diseño {
+        width: 90%;
+        max-width: 320px;
+    }
+}

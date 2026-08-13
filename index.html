@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eli's Invitations</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Eli's Invitations ♡</h1>
+
+        <p>
+            Diseño y creación de invitaciones digitales
+            para momentos especiales ✨
+        </p>
+
+        <img src="imagenes/cielo.jpg" alt="Eli's Invitations">
+
+    </header>
+
+
+    <!-- GALERÍA -->
+
+    <section class="galeria" id="galeria">
+
+        <h2>Mis diseños</h2>
+
+        <p>
+            Algunos de mis trabajos favoritos ♡
+        </p>
+
+        <div class="galeria-contenedor">
+
+            <div class="diseño">
+                <img src="imagenes/Invitación.jpg" alt="Invitación digital 1">
+            </div>
+
+            <div class="diseño">
+                <img src="imagenes/RockstarParty.jpg" alt="Invitación digital 2">
+            </div>
+
+            <div class="diseño">
+                <img src="imagenes/Tarjeta.jpg" alt="Invitación digital 3">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section id="contacto">
+
+        <h2>Contacto</h2>
+
+        <p>📞 474 136 9460</p>
+
+        <p>✉️ ee.goku55@gmail.com</p>
+
+    </section>
+
+
+    <!-- VENTANA PARA VER LAS INVITACIONES -->
+
+    <div class="modal" id="modal">
+
+        <span class="cerrar">&times;</span>
+
+        <img id="imagenGrande" src="" alt="Diseño ampliado">
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const imagenes = document.querySelectorAll(".diseño img");
+
+        const modal = document.getElementById("modal");
+
+        const imagenGrande = document.getElementById("imagenGrande");
+
+        const cerrar = document.querySelector(".cerrar");
+
+
+        imagenes.forEach(imagen => {
+
+            imagen.addEventListener("click", () => {
+
+                modal.style.display = "flex";
+
+                imagenGrande.src = imagen.src;
+
+            });
+
+        });
+
+
+        cerrar.addEventListener("click", () => {
+
+            modal.style.display = "none";
+
+        });
+
+
+        modal.addEventListener("click", (e) => {
+
+            if (e.target === modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
